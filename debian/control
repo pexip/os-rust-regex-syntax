@@ -1,0 +1,88 @@
+Source: rust-regex-syntax
+Section: rust
+Priority: optional
+Build-Depends: debhelper (>= 12),
+ dh-cargo (>= 25),
+ cargo:native <!nocheck>,
+ rustc:native <!nocheck>,
+ libstd-rust-dev <!nocheck>
+Maintainer: Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
+Uploaders:
+ Ximin Luo <infinity0@debian.org>,
+ Wolfgang Silbermayr <wolfgang@silbermayr.at>,
+ Daniel Kahn Gillmor <dkg@fifthhorseman.net>
+Standards-Version: 4.5.1
+Vcs-Git: https://salsa.debian.org/rust-team/debcargo-conf.git [src/regex-syntax]
+Vcs-Browser: https://salsa.debian.org/rust-team/debcargo-conf/tree/master/src/regex-syntax
+Homepage: https://github.com/rust-lang/regex
+Rules-Requires-Root: no
+
+Package: librust-regex-syntax-dev
+Architecture: any
+Multi-Arch: same
+Depends:
+ ${misc:Depends}
+Recommends:
+ librust-regex-syntax+unicode-dev (= ${binary:Version})
+Provides:
+ librust-regex-syntax+unicode-age-dev (= ${binary:Version}),
+ librust-regex-syntax+unicode-bool-dev (= ${binary:Version}),
+ librust-regex-syntax+unicode-case-dev (= ${binary:Version}),
+ librust-regex-syntax+unicode-gencat-dev (= ${binary:Version}),
+ librust-regex-syntax+unicode-perl-dev (= ${binary:Version}),
+ librust-regex-syntax+unicode-script-dev (= ${binary:Version}),
+ librust-regex-syntax+unicode-segment-dev (= ${binary:Version}),
+ librust-regex-syntax-0-dev (= ${binary:Version}),
+ librust-regex-syntax-0+unicode-age-dev (= ${binary:Version}),
+ librust-regex-syntax-0+unicode-bool-dev (= ${binary:Version}),
+ librust-regex-syntax-0+unicode-case-dev (= ${binary:Version}),
+ librust-regex-syntax-0+unicode-gencat-dev (= ${binary:Version}),
+ librust-regex-syntax-0+unicode-perl-dev (= ${binary:Version}),
+ librust-regex-syntax-0+unicode-script-dev (= ${binary:Version}),
+ librust-regex-syntax-0+unicode-segment-dev (= ${binary:Version}),
+ librust-regex-syntax-0.6-dev (= ${binary:Version}),
+ librust-regex-syntax-0.6+unicode-age-dev (= ${binary:Version}),
+ librust-regex-syntax-0.6+unicode-bool-dev (= ${binary:Version}),
+ librust-regex-syntax-0.6+unicode-case-dev (= ${binary:Version}),
+ librust-regex-syntax-0.6+unicode-gencat-dev (= ${binary:Version}),
+ librust-regex-syntax-0.6+unicode-perl-dev (= ${binary:Version}),
+ librust-regex-syntax-0.6+unicode-script-dev (= ${binary:Version}),
+ librust-regex-syntax-0.6+unicode-segment-dev (= ${binary:Version}),
+ librust-regex-syntax-0.6.27-dev (= ${binary:Version}),
+ librust-regex-syntax-0.6.27+unicode-age-dev (= ${binary:Version}),
+ librust-regex-syntax-0.6.27+unicode-bool-dev (= ${binary:Version}),
+ librust-regex-syntax-0.6.27+unicode-case-dev (= ${binary:Version}),
+ librust-regex-syntax-0.6.27+unicode-gencat-dev (= ${binary:Version}),
+ librust-regex-syntax-0.6.27+unicode-perl-dev (= ${binary:Version}),
+ librust-regex-syntax-0.6.27+unicode-script-dev (= ${binary:Version}),
+ librust-regex-syntax-0.6.27+unicode-segment-dev (= ${binary:Version})
+Description: Regular expression parser - Rust source code
+ This package contains the source for the Rust regex-syntax crate, packaged by
+ debcargo for use with cargo and dh-cargo.
+
+Package: librust-regex-syntax+unicode-dev
+Architecture: any
+Multi-Arch: same
+Depends:
+ ${misc:Depends},
+ librust-regex-syntax-dev (= ${binary:Version}),
+ librust-regex-syntax+unicode-age-dev (= ${binary:Version}),
+ librust-regex-syntax+unicode-bool-dev (= ${binary:Version}),
+ librust-regex-syntax+unicode-case-dev (= ${binary:Version}),
+ librust-regex-syntax+unicode-gencat-dev (= ${binary:Version}),
+ librust-regex-syntax+unicode-perl-dev (= ${binary:Version}),
+ librust-regex-syntax+unicode-script-dev (= ${binary:Version}),
+ librust-regex-syntax+unicode-segment-dev (= ${binary:Version})
+Provides:
+ librust-regex-syntax+default-dev (= ${binary:Version}),
+ librust-regex-syntax-0+unicode-dev (= ${binary:Version}),
+ librust-regex-syntax-0+default-dev (= ${binary:Version}),
+ librust-regex-syntax-0.6+unicode-dev (= ${binary:Version}),
+ librust-regex-syntax-0.6+default-dev (= ${binary:Version}),
+ librust-regex-syntax-0.6.27+unicode-dev (= ${binary:Version}),
+ librust-regex-syntax-0.6.27+default-dev (= ${binary:Version})
+Description: Regular expression parser - feature "unicode" and 1 more
+ This metapackage enables feature "unicode" for the Rust regex-syntax crate, by
+ pulling in any additional dependencies needed by that feature.
+ .
+ Additionally, this package also provides the "default" feature.
