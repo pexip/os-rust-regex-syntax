@@ -1,3 +1,9 @@
+rust-regex-syntax (0.6.27-1+pexip24u1) pexip; urgency=medium
+
+  * Prepare Pexip packaging
+
+ -- Huw Jones <huw@pexip.com>  Thu, 11 Jul 2024 11:20:56 +0100
+
 rust-regex-syntax (0.6.27-1) unstable; urgency=medium
 
   * Team upload.
